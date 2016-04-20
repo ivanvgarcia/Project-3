@@ -1,0 +1,251 @@
+* {
+	font-family: 'Cambay', sans-serif;
+}
+
+/* main styles */
+
+header {
+	background-color: #ff5050;
+	color: white;
+	text-transform: uppercase;
+}
+
+h1 {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 30px;
+	padding-bottom: 30px; 
+}
+
+form {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+hr {
+	border-bottom: 5px solid #ff5050;
+	border-radius: 10px;
+}
+
+fieldset {
+	border: 0 none;
+}
+
+legend {
+	font-weight: 900;
+	font-size: 30px;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+select {
+	cursor: pointer;
+}
+
+button {
+	width: 100%;
+	height: 70px;
+	background-color: #ff5050;
+	color: white;
+	font-weight: bolder;
+	font-size: 30px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: gray outset 5px;
+}
+
+label {
+	font-size: 25px;
+	line-height: 30px;
+	display: block;
+	margin-bottom: 10px;
+	color: #ff5050;
+}
+
+footer p {
+	font-style: italic;
+	text-align: center;
+	padding-bottom: 3em;
+}
+
+/* class styles */
+
+.form-header {
+	text-align: center;
+	padding-bottom: 3em;
+	border-bottom: 10px solid #ff5050;
+	border-radius: 20px;
+}
+
+.form-header h2 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.form-header p {
+	font-size: 20px;
+	margin: 0;
+	color: #ff8080;
+}
+
+.row label {
+	display: block;
+	margin-bottom: .2em;
+	margin-top: .2em;
+	font-size: 30px;
+	font-weight: 900;
+	color: #ff8080;
+}
+
+.topic-area label{
+	margin-top: 2em;
+	margin-bottom: 0;
+	color: #ff5050;
+	font-size: 25px;
+}
+
+/* COMBINATORS */
+
+div > label {	
+	font-size: 25px;
+	line-height: 35px;
+	display: block;
+	margin-bottom: 10px;
+	color: black;
+}
+
+label ~ textarea {
+	width: 100%;
+	height: 200px;
+	margin-top: 0;
+}
+
+/* PSEUDO CLASSES */
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+	font-size: 25px;
+	text-align: right;
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	height: 55px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+	border: 2px inset #999999;
+	background-color: #ffcccc;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	text-align: center;
+}
+
+input[placeholder] {
+	padding-right: 10px;
+	font-style: italic;
+}
+
+textarea[placeholder] {
+	text-align: left;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display:none;
+}
+
+input[type=checkbox] + label:before {
+    content: "";  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    vertical-align:middle;
+    margin-right: 15px;  
+    background-color: #aaa;   
+    border-radius: 4px;  
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label:before {
+    content:"\2714"; /* Tick */
+    color: #ff5050;
+    background-color: white; 
+    text-align:center;
+    line-height:22px;
+    font-size: 15px;
+    box-shadow: inset 0 0 0 2px #ff5050;
+}
+
+input[type=radio] + label:before {
+    content: "";  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    vertical-align:middle;
+    margin-right: 15px;  
+    background-color: #aaa;  
+    box-shadow: inset 0px 2px 2px rgba(0, 0, 0, .3);
+    border-radius: 8px;  
+    cursor: pointer;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022"; /* Bullet */
+    color:white;
+    background-color: #ff5050; 
+    font-size:.5em;
+    text-align:center;
+    line-height:25px;
+    font-size: 20px;
+}
+
+@media (min-width: 724px) {
+
+	form {
+		max-width: 80%;
+	}
+
+	.row {
+		display:-webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin: 2em 0 2em 0;
+	}
+
+	.row label {
+		width: 40%;
+		font-size: 25px;
+		padding-top: 10px;
+	}
+
+
+	.row input,
+	select {
+		width: 60%;
+		height: 55px;
+		margin: 0;
+	}
+
+	legend {
+		padding-bottom: 0;
+	}
+}
+
+@media (min-width: 1024px) {
+
+	form {
+		max-width: 50%;
+	}
+}
