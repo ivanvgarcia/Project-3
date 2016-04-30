@@ -31,6 +31,15 @@ hr {
 
 fieldset {
 	border: 0 none;
+	border-radius: 20px;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+}
+
+fieldset legend {
+	padding-top: 100px;
 }
 
 legend {
@@ -42,6 +51,14 @@ legend {
 
 select {
 	cursor: pointer;
+	font-size: 25px;
+	text-align: right;
+	border: 2px solid black;
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	height: 61px;
 }
 
 button {
@@ -78,6 +95,10 @@ footer p {
 	padding-bottom: 3em;
 	border-bottom: 10px solid #ff5050;
 	border-radius: 20px;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
 }
 
 .form-header h2 {
@@ -107,6 +128,20 @@ footer p {
 	font-size: 25px;
 }
 
+.form-header:hover,
+fieldset:hover {
+	border-left: 10px solid #aaa;
+	border-bottom: 10px solid #ff5050;
+	background-color: #ffcccc;
+	color: #ff5050;
+	-webkit-transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-o-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+	padding: 1em;
+	margin: 1em;
+}
+
 /* COMBINATORS */
 
 div > label {	
@@ -127,13 +162,13 @@ label ~ textarea {
 
 input[type="text"],
 input[type="tel"],
-select,
+input[type="email"],
 textarea {
 	font-size: 25px;
 	text-align: right;
 	border: 2px solid black;
 	border-radius: 5px;
-	width: 100%;
+	width: 95%;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	height: 55px;
@@ -216,6 +251,16 @@ input[type=radio]:checked + label:before {
 		max-width: 80%;
 	}
 
+	select {
+		width: 62%;
+		height: 61px;
+		margin: 0;
+	}
+
+	legend {
+		padding-bottom: 0;
+	}
+
 	.row {
 		display:-webkit-flex;
 		display: flex;
@@ -230,16 +275,10 @@ input[type=radio]:checked + label:before {
 		padding-top: 10px;
 	}
 
-
-	.row input,
-	select {
+	.row input {
 		width: 60%;
 		height: 55px;
 		margin: 0;
-	}
-
-	legend {
-		padding-bottom: 0;
 	}
 }
 
